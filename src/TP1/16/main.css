@@ -3,3 +3,49 @@
   margin: 0;
   box-sizing: border-box;
 }
+
+div {
+  margin: 0 auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+h1 {
+  text-align: center;
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 30px;
+}
+
+div > div {
+  background-color: #f4f4f4;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  gap: 20px;
+}
+
+img {
+  width: 150px;
+  height: 150px;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+h2 {
+  font-size: 1.8rem;
+  color: #007bff;
+  margin: 0;
+}
+
+p {
+  margin: 5px 0;
+  font-size: 1rem;
+  color: #666;
+}
+
+p:last-of-type {
+  font-weight: bold;
+  color: #333;
+}

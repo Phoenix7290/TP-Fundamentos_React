@@ -1,5 +1,5 @@
-function verificarEstoque () {
-    const produto = produtos.filter(produto => produto.quantidadeEmEstoque !== 0);
+function verificarEstoque (produto) {
+    const produto = produtos.filter(produto => produto.quantidadeEmEstoque > 0);
     return produto;
 }
 

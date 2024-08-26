@@ -1,7 +1,10 @@
-import ListaTarefas from "./components/ListaTarefas"
+import ListaTarefas from "./components/ListaTarefas";
 
 export default function App() {
-    return (
-        <div><ListaTarefas/></div>
-    )
+  return (
+    <div>
+      <h1>Lista de Tarefas:</h1>
+      <ListaTarefas />
+    </div>
+  );
 }
