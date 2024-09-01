@@ -6,7 +6,10 @@ export default function App() {
     return (
         <div>
             <Header />
-            <Card />
+            <div className="container-cards">
+                <Card />
+                <Card />
+            </div>
             <Footer />
         </div>
     )

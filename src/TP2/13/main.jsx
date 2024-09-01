@@ -1,10 +1,14 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import App from './App.jsx'
+import SobreMim from './components/SobreMim.jsx'
+import Habilidades from './components/Habilidades.jsx'
+import Projetos from './components/Projetos.jsx'
 import './main.css'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <App />
+    <SobreMim />
+    <Habilidades />
+    <Projetos />
   </React.StrictMode>,
 )

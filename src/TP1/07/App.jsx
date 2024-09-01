@@ -1,6 +1,6 @@
-function verificarEstoque (produto) {
-    const produto = produtos.filter(produto => produto.quantidadeEmEstoque > 0);
-    return produto;
+function verificarEstoque () {
+    const produtosEmEstoque = produtos.filter(produto => produto.quantidadeEmEstoque > 0);
+    return produtosEmEstoque;
 }
 
 const produtos = [ 

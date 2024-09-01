@@ -7,6 +7,7 @@ export default function App() {
         <div>
             <Header />
             <Card />
+            <Card />
             <Footer />
         </div>
     )

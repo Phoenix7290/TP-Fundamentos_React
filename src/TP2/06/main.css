@@ -9,3 +9,8 @@ body {
   height: 100vh;
 }
 
+.container-cards {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}

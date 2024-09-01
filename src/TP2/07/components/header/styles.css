@@ -4,9 +4,16 @@ header {
     padding: 10px 20px;
     margin: 10px;
     justify-content: space-between;
+    margin-bottom: 5vh;
 }
 
 img {
     width: 50px;
     height: 50px;
+}
+
+@media (min-width: 768px) {
+    header {
+        margin-top: 0;
+    }
 }

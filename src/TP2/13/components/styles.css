@@ -1,0 +1,197 @@
+header {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 5px;
+    margin-top: 20px;
+    margin-bottom: 25px;
+}
+
+header>div {
+    width: 100%;
+    flex-flow: column nowrap;
+    text-align: center;
+}
+
+header>div>h1 {
+    font-size: 1.6rem;
+    margin-bottom: 5px;
+}
+
+header>img {
+    width: 120px;
+}
+
+.sobre-mim {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 5px 15px;
+    flex-flow: column wrap;
+    text-align: center;
+}
+
+.sobre-mim>h1 {
+    font-size: 1.6rem;
+    margin-bottom: 10px;
+}
+
+.sobre-mim>p {
+    font-size: 1.05rem;
+    margin-bottom: 15px;
+}
+
+hr {
+    width: 90%;
+    margin: 0 auto;
+    border-bottom: 1px solid #000000;
+}
+
+.container-habilidades {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 15px 15px;
+    flex-flow: column wrap;
+    text-align: center;
+}
+
+.container-habilidades>h1 {
+    font-size: 1.6rem;
+    margin-bottom: 20px;
+}
+
+.container-habilidades>div {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);	
+    grid-template-rows: repeat(3, 1fr);
+    width: 100%;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 40px;  
+}
+
+#java {
+    grid-column: 2; 
+    grid-row: 3; 
+}
+
+#git {
+    grid-column: 3; 
+    grid-row: 3;
+}
+
+.container-projetos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 40px 15px;
+    flex-flow: column wrap;
+    text-align: center;
+}
+
+.container-projetos>h1 {
+    font-size: 1.6rem;
+    margin-bottom: 20px;
+}
+
+.projetos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 15px 0;
+    gap: 20px;
+}
+.projetos>p {
+    flex: 1;
+    font-size: 1rem;
+    margin: 0;
+}
+
+.projetos>a>img {
+    width: 100px;
+}
+
+.container-projetos>h2 {
+    font-size: 1.2rem;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+@media (min-width: 768px) {
+    header {
+        padding: 20px;
+        justify-content: space-evenly;
+    }
+
+    header>div {
+        flex-flow: row nowrap;
+        text-align: left;
+    }
+
+    header>div>h1 {
+        font-size: 3rem;
+    }
+
+    header>div>p {
+        font-size: 2.5rem;
+    }
+
+    header>img {
+        width: 250px;
+        height: 200px;
+    }
+
+    .sobre-mim {
+        margin: 5px 15px;
+        flex-flow: column nowrap;
+        text-align: left;
+    }
+    
+    .sobre-mim>h1 {
+        font-size: 3rem;
+    }
+
+    .sobre-mim>p {
+        font-size: 1.5rem;
+        text-align: center;
+    }
+
+    hr {
+        display: none;
+    }
+
+    .container-habilidades>h1 {
+        font-size: 2.5rem;
+    }
+
+    .container-habilidades>div {
+        width: 70%;
+        grid-template-columns: repeat(5, 1fr);	
+        grid-template-rows: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+    #git {
+        grid-column: 4; 
+        grid-row: 2;
+    }
+
+    #java {
+        grid-column: 5; 
+        grid-row: 2; 
+    }
+
+    .projetos {
+        justify-content: space-between;
+    }
+
+    .projetos>a>img {
+        width: 20vw;
+    }
+
+    .projetos>p {
+        font-size: 2em;
+    }
+}

@@ -1,0 +1,19 @@
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+    padding: 10px 10px;
+    margin-top: 20vh;
+    flex-flow: column wrap;
+}
+
+footer h1 {
+    margin: 10px;
+}
+
+@media (max-width: 768px) {
+    footer {
+        margin-top: 10vh;
+    }
+}

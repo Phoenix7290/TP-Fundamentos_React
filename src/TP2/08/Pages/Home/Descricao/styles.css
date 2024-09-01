@@ -1,0 +1,25 @@
+.container-section {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 3vw;
+}
+
+.container-section img {
+    margin-right: 5vw;
+}
+
+.container-about {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-flow: column wrap;
+    margin: 3vw;
+}
+
+.container-about div {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    margin-top: 2vh;
+}

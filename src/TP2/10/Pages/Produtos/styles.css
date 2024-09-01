@@ -1,0 +1,33 @@
+.container-produtos {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-flow: column wrap;
+    margin: 3vw;
+    gap: 2vh;
+}
+
+.container-produtos div {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    flex-flow: row wrap;
+    gap: 3vw;
+}
+
+.container-produtos div img{
+    width: 120px;
+    height: 120px;
+}
+
+@media (min-width: 768px) {
+
+    .container-produtos div {
+        gap: 5vw;
+    }
+
+    .container-produtos div img{
+        width: 250px;
+        height: 250px;
+    }
+}

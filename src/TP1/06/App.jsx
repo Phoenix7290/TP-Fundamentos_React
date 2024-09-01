@@ -13,7 +13,7 @@ const App = () => {
   console.log(produtosFiltrados);
   return (
       <main>
-          <h1>Os produtos com a categoria "Eletrônicos" são:</h1>
+          <h1>Os produtos com a categoria &quot;Eletrônicos&quot; são:</h1>
           <ul>
               {produtosFiltrados.map((produto)=> (
                   <li key={produto.nome}>{produto.nome}</li>

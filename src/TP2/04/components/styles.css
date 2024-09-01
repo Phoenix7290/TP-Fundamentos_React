@@ -43,6 +43,7 @@ textarea {
 
 textarea {
   height: 100px;
+  resize: none;
 }
 
 div:last-child {
