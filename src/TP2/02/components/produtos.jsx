@@ -1,3 +1,8 @@
+import Alexa1 from '../Assets/alexa1.jpeg';
+import Alexa2 from '../Assets/alexa2.jpg';
+import Alexa3 from '../Assets/alexa3.jpeg';
+import Alexa4 from '../Assets/alexa4.jpg';
+
 export default function Produtos() {
     return (
         <div style={{
@@ -12,7 +17,7 @@ export default function Produtos() {
                 flexFlow: "row wrap",
             }}>
                 <img 
-                    src="https://via.placeholder.com/150" 
+                    src={Alexa1}
                     alt="Placeholder"
                     style={{
                         width: "100px",
@@ -21,7 +26,7 @@ export default function Produtos() {
                     }}
                 />
                 <img 
-                    src="https://via.placeholder.com/150" 
+                    src={Alexa2}
                     alt="Placeholder"
                     style={{
                         width: "100px",
@@ -30,7 +35,7 @@ export default function Produtos() {
                     }}
                 />
                 <img 
-                    src="https://via.placeholder.com/150" 
+                    src={Alexa3}
                     alt="Placeholder"
                     style={{
                         width: "100px",
@@ -47,12 +52,12 @@ export default function Produtos() {
                 margin: "50px"
             }}>
                 <div>
-                    <h1>Nome do Produto</h1>
-                    <p>Descrição do Produto</p>
-                    <p>R$ 100,00</p>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iste dolor natus obcaecati placeat velit aut voluptate esse suscipit ut ipsa! Unde a ipsa, consectetur minima quas officia tempore laudantium at?</p>
+                    <h1>Alexa</h1>
+                    <p>Assistente da Amazon</p>
+                    <p>R$ 400,00</p>
+                    <p>Alexa é uma assistente virtual desenvolvido pela Amazon e lançada em novembro de 2014. Ela serve para auxiliar na execução de tarefas do dia a dia, como, por exemplo, definir alarmes, pesquisar na internet e até mesmo controlar a sua casa conectada.</p>
                 </div>
-                <img src="https://via.placeholder.com/150" alt="Placeholder" style={{}}/>
+                <img src={Alexa4} alt="Placeholder" style={{width: "150px"}}/>
             </div>
         </div>
     )

@@ -1,15 +1,16 @@
+import Logo from '../../Assets/logo.jpeg';
 import './styles.css';
 
 export default function Home() {
     return (
-        <header>
-            <img src="https://via.placeholder.com/50" alt="Placeholder" />
+        <header id='home'>
+            <img src={Logo} alt="Placeholder" id='logo' />
             <nav>
                 <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Quem Somos</a></li>
-                    <li><a href="#">Produtos</a></li>
-                    <li><a href="#">Contato</a></li>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#descricao">Quem Somos</a></li>
+                    <li><a href="#produtos">Produtos</a></li>
+                    <li><a href="#contato">Contato</a></li>
                 </ul>
             </nav>
         </header>

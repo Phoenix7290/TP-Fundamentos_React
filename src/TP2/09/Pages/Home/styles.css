@@ -25,9 +25,19 @@ a {
     text-decoration: none;
 }
 
+#logo {
+    width: 100px;
+    height: 100px;
+}
+
 @media (min-width: 768px) {
     header {
     padding: 20px;
     justify-content: space-between;
+    }
+
+    #logo {
+        width: 200px;
+        height: 200px;
     }
 }
