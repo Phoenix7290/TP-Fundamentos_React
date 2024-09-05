@@ -46,7 +46,7 @@ section div {
 }
 
 a {
-  margin: 10px; /* Ajuste para manter o espaçamento entre os itens */
+  margin: 10px;
   text-decoration: none;
   color: #007BFF;
   font-weight: bold;
