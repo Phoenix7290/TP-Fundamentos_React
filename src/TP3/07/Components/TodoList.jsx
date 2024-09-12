@@ -1,23 +1,21 @@
-import React from 'react';
-import TodoItem from './TodoItem';
+import TodoItem from "./TodoItem";
+import PropTypes from "prop-types";
+import Styles from "./styles.module.css";
 
-class TodoList extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      tasks: ['Tarefa 1: Lavar Casa', 'Tarefa 2: Fazer TP', 'Tarefa 3: A Arte da Guerra']
-    };
-  }
+export default function TodoList({ items }) {
+  
+  TodoList.propTypes = {
+    items: PropTypes.array.isRequired,
+  };
 
-  render() {
-    return (
+  return (
+    <div className={Styles.containerList}>
       <ul>
-        {this.state.tasks.map((task, index) => (
+        {items.map((task, index) => (
           <TodoItem key={index} task={task} />
         ))}
       </ul>
-    );
-  }
-}
+    </div>
+  )
 
-export default TodoList;
+}

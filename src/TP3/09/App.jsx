@@ -1,5 +1,12 @@
+import TodoList from "./Components/TodoList";
+import { useState } from "react";
+
 export default function App() {
-    return (
-        <div>Hello World</div>
-    )
+  const [items, setItems] = useState(['Jogar', 'Estudar React', 'Fazer exercícios']);
+
+  const addItem = (task) => {
+    setItems([...items, task]);
+  };
+
+  return <TodoList items={items} addItem={addItem}/>;
 }

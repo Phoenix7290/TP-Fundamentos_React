@@ -1,0 +1,39 @@
+.containerList {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.itemList {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  padding: 10px;
+  border: 1px solid #000;
+  border-radius: 5px;
+}
+
+.containerAdd {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.containerAdd input {
+  padding: 5px;
+  margin-right: 10px;
+  border: 1px solid #000;
+  border-radius: 5px;
+}
+
+.itemButton {
+  padding: 5px 10px;
+  background-color: #000;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}

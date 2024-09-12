@@ -1,9 +1,13 @@
-import TodoList from './Components/TodoList';
+import TodoList from "./Components/TodoList";
 
 export default function App() {
-    return (
-        <div>
-            <TodoList />
-        </div>
-    )
+  const items = [
+    "Fazer TP",
+    "Jogar",
+    "Procurar jogo da Nintendo",
+    "Procurar meios alternativos de entretenimento",
+    "Fazer PB",
+  ];
+
+  return <TodoList items={items} />;
 }
