@@ -4,29 +4,47 @@ import Styles from "./styles.module.css";
 import { useState } from "react";
 
 export default function TodoList() {
-  const [item, setItem] = useState([
-    "Fazer TP",
-    "Jogar",
-    "Procurar jogo da Nintendo",
-    "Procurar meios alternativos de entretenimento",
-    "Fazer PB",
+  const [items, setItems] = useState([
+    { text: "Fazer TP", isCompleted: false },
+    { text: "Jogar", isCompleted: false },
+    { text: "Procurar jogo da Nintendo", isCompleted: false },
+    { text: "Procurar meios alternativos de entretenimento", isCompleted: false },
+    { text: "Fazer PB", isCompleted: false },
   ]);
   const [createItem, setCreateitem] = useState("");
 
   const addItem = () => {
-    setItem([...item, createItem]);
-    setCreateitem('');
-  }
+    if (createItem) {
+      setItems([...items, { text: createItem, isCompleted: false }]);
+      setCreateitem("");
+    }
+  };
+
+  const toggleComplete = (index) => {
+    const newItems = [...items];
+    newItems[index].isCompleted = !newItems[index].isCompleted;
+    setItems(newItems);
+  };
 
   return (
     <div className={Styles.containerList}>
       <ul>
-        {item.map((item, index) => (
-          <TodoItem key={index} item={item} />
+        {items.map((item, index) => (
+          <TodoItem
+            key={index}
+            item={item.text}
+            isCompleted={item.isCompleted}
+            onComplete={() => toggleComplete(index)}
+          />
         ))}
       </ul>
       <div className={Styles.containerAdd}>
-        <input type="text" value={createItem} onChange={(e) => setCreateitem(e.target.value)} placeholder="Nova Tarefa" />
+        <input
+          type="text"
+          value={createItem}
+          onChange={(e) => setCreateitem(e.target.value)}
+          placeholder="Nova Tarefa"
+        />
         <button onClick={addItem}>Adicionar</button>
       </div>
     </div>

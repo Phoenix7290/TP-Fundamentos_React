@@ -1,54 +1,49 @@
+import TodoItem from "./TodoItem";
 import PropTypes from "prop-types";
-import { useState } from "react";
 import Styles from "./styles.module.css";
+import { useState } from "react";
 
-const TodoItem = ({ item, onDelete, onEdit }) => {
-  const [isCompleted, setIsCompleted] = useState(false);
-  const [isEditing, setIsEditing] = useState(false);
-  const [editItem, setEditItem] = useState(item);
+export default function TodoList({ items, addItem, deleteTask, toggleComplete, editItem }) {
+  const [createItem, setCreateitem] = useState("");
 
-  const handleComplete = () => {
-    setIsCompleted(!isCompleted);
+  const handleAddItem = () => {
+    if (createItem) {
+      addItem(createItem);
+      setCreateitem("");
+    }
   };
 
-  const handleDeleteItem = () => {
-    onDelete(item);
-  }
-
-  const handleEditItem = () => {
-    setIsEditing(!isEditing);
-  }
-
-  const handleSaveItem = () => {
-    onEdit(item, editItem);
-    setIsEditing(false);
-  }
-
   return (
-    <>
-      <li className={Styles.itemList} style={{ color: isCompleted ? "green" : "black"}}>
-        {isEditing ? (
-          <input type="text" value={editItem} onChange={(e) => setEditItem(e.target.value)} />
-        ) : (
-          item
-        )}
-        <button onClick={handleComplete}>
-          {isCompleted ? "Desmarcar" : "Concluir"}
-        </button>
-        <button onClick={handleEditItem}>Editar</button>
-        {isEditing && <button onClick={handleSaveItem}>Salvar</button>}
-        <button onClick={handleDeleteItem}>
-          Excluir
-        </button>
-      </li>
-    </>
+    <div className={Styles.containerList}>
+      <ul>
+        {items.map((item, index) => (
+          <TodoItem
+            key={index}
+            item={item.text}
+            isCompleted={item.isCompleted}
+            onDelete={deleteTask}
+            onComplete={toggleComplete}
+            onEdit={editItem}
+          />
+        ))}
+      </ul>
+      <div className={Styles.containerAdd}>
+        <input
+          type="text"
+          value={createItem}
+          onChange={(e) => setCreateitem(e.target.value)}
+          placeholder="Nova Tarefa"
+        />
+        <button onClick={handleAddItem}>Adicionar</button>
+      </div>
+    </div>
   );
-};
+}
 
-TodoItem.propTypes = {
-  item: PropTypes.string.isRequired,
-  onDelete: PropTypes.func.isRequired,
-  onEdit: PropTypes.func.isRequired,
+TodoList.propTypes = {
+  items: PropTypes.array.isRequired,
+  addItem: PropTypes.func.isRequired,
+  deleteTask: PropTypes.func.isRequired,
+  toggleComplete: PropTypes.func.isRequired,
+  editItem: PropTypes.func.isRequired,
 };
-
-export default TodoItem;
