@@ -1,0 +1,1 @@
+import{j as e,c as t,R as r}from"./client-C9r4PM53.js";function o(){return e.jsx("span",{children:"Hello World"})}t.createRoot(document.getElementById("root")).render(e.jsx(r.StrictMode,{children:e.jsx(o,{})}));
