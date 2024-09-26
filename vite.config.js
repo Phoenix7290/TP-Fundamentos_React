@@ -1,7 +1,65 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 
-// https://vitejs.dev/config/
 export default defineConfig({
+  base: "/TP-Fundamentos_React/",
   plugins: [react()],
+  build: {
+    rollupOptions: {
+      input: {
+        main: "index.html",	
+        
+        tp1_01: "src/TP1/01/index.html",
+        tp1_02: "src/TP1/02/index.html",
+        tp1_03: "src/TP1/03/index.html",
+        tp1_04: "src/TP1/04/index.html",
+        tp1_05: "src/TP1/05/index.html",
+        tp1_06: "src/TP1/06/index.html",
+        tp1_07: "src/TP1/07/index.html",
+        tp1_08: "src/TP1/08/index.html",
+        tp1_09: "src/TP1/09/index.html",
+        tp1_10: "src/TP1/10/index.html",
+        tp1_11: "src/TP1/11/index.html",
+        tp1_12: "src/TP1/12/index.html",
+        tp1_13: "src/TP1/13/index.html",
+        tp1_14: "src/TP1/14/index.html",
+        tp1_15: "src/TP1/15/index.html",
+        tp1_16: "src/TP1/16/index.html",
+        
+        tp2_01: "src/TP2/01/index.html",
+        tp2_02: "src/TP2/02/index.html",
+        tp2_03: "src/TP2/03/index.html",
+        tp2_04: "src/TP2/04/index.html",
+        tp2_05: "src/TP2/05/index.html",
+        tp2_06: "src/TP2/06/index.html",
+        tp2_07: "src/TP2/07/index.html",
+        tp2_08: "src/TP2/08/index.html",
+        tp2_09: "src/TP2/09/index.html",
+        tp2_10: "src/TP2/10/index.html",
+        tp2_11: "src/TP2/11/index.html",
+        tp2_12: "src/TP2/12/index.html",
+        tp2_13: "src/TP2/13/index.html",
+        tp2_14: "src/TP2/14/index.html",
+        tp2_15: "src/TP2/15/index.html",
+        tp2_16: "src/TP2/16/index.html",
+
+        tp3_01: "src/TP3/01/index.html",
+        tp3_02: "src/TP3/02/index.html",
+        tp3_03: "src/TP3/03/index.html",
+        tp3_04: "src/TP3/04/index.html",
+        tp3_05: "src/TP3/05/index.html",
+        tp3_06: "src/TP3/06/index.html",
+        tp3_07: "src/TP3/07/index.html",
+        tp3_08: "src/TP3/08/index.html",
+        tp3_09: "src/TP3/09/index.html",
+        tp3_10: "src/TP3/10/index.html",
+        tp3_11: "src/TP3/11/index.html",
+        tp3_12: "src/TP3/12/index.html",
+        tp3_13: "src/TP3/13/index.html",
+        tp3_14: "src/TP3/14/index.html",
+        tp3_15: "src/TP3/15/index.html",
+        tp3_16: "src/TP3/16/index.html",
+      },
+    },
+  },
 })
